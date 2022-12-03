@@ -54,26 +54,26 @@ To deploy this project run
 
 <details><summary>Developers</summary>
 
- - [@amateli]()
- - [@MKO]()
- - [@Blessing]()
- - [@Zainab]()
- - [@shazzar]()
- - [@kayode]()
+ - [@amateli](https://github.com/amateli)
+ - [@MKhadijatO](https://github.com/MKhadijatO)
+ - [@Blessing-uba](https://github.com/Blessing-uba)
+ - [@ZainabOlamide](https://github.com/ZainabOlamide)
+ - [@Belta-shazzar](https://github.com/Belta-shazzar)
+ - [@larsody](https://larsody.com/larsody)
 
 </details>
 
 <details><summary>Product Designers</summary>
  
- - [@Eclarks]()
- - [@Hannah]()
+ - [@Eclarks](https://github.com/Eclarks)
+ - [@onome123](https://github.com/onome123)
  - [@Ebubechi]()
- - [@Bibi Pictures]()
- - [@Imraan]()
- - [@John]()
+ - [@bilkisutace](https://github.com/bilkisutace)
+ - [@al-imraan](https://github.com/al-imraan)
+ - [@Johnogundare](https://github.com/Johnogundare)
  - [@Sinmi]()
- - [@Riella]()
- - [@Ridwan]()
+ - [@Riella1](https://github.com/Riella1)
+ - [@ridwanalaps](https://github.com/ridwanalaps)
  - []()
  - []()
  - []()
