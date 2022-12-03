@@ -71,7 +71,7 @@ To deploy this project run
  - [@bilkisutace](https://github.com/bilkisutace)
  - [@al-imraan](https://github.com/al-imraan)
  - [@Johnogundare](https://github.com/Johnogundare)
- - [@Sinmi]()
+ - [@SinmiloluwaOgedengbe](https://github.com/SinmiloluwaOgedengbe)
  - [@Riella1](https://github.com/Riella1)
  - [@ridwanalaps](https://github.com/ridwanalaps)
  - []()
