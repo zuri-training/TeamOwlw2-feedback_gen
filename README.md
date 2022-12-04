@@ -8,7 +8,7 @@ This system allows users to create, edit, save, update and download the feedback
 
 ## Documentation Link
 
-Brief summary of documentation 
+[Documentation](https://docs.google.com/document/d/1jO6IiHKTrZ5ClHMPfj15Tcy2CrTWs9_gJIm_9DGlYRk/edit?usp=sharing)
 
 ## Features
 
