@@ -32,15 +32,14 @@ Brief summary of documentation
 
 **Client**: HTML, CSS, JavaScript
 
-**Server**: Node, Express
+**Server**: Node, Express, MongoDB
 
-**Design**: Figma
+**Design**: Figma, Figjam, Google forms
 
 ## Useful Resources
 
- - [Database Schema]()
- - [MoodBoard or Designs used]()
- - [Figma]()
+ - [Database Schema](https://dbdiagram.io/d/638ce9b5bae3ed7c4544a0aa)
+ - [Figma](https://docs.google.com/document/d/1jCeevlAcXGP282AQj211EX--mhSvVHmGOFuGmswJLeo/edit?usp=sharing)
 
 ## Deployment
 
