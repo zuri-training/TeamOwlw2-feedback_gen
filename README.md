@@ -39,7 +39,7 @@ This system allows users to create, edit, save, update and download the feedback
 ## Useful Resources
 
  - [Database Schema](https://dbdiagram.io/d/638ce9b5bae3ed7c4544a0aa)
- - [Figma](https://docs.google.com/document/d/1jCeevlAcXGP282AQj211EX--mhSvVHmGOFuGmswJLeo/edit?usp=sharing)
+ - [Figma](https://www.figma.com/file/lpdyAUXqLwTomYpNPdA5Wr/team-Owlw2-feedback-form?node-id=724%3A2359&t=3cq9dL81e2y1BFvo-0)
 
 ## Deployment
 
