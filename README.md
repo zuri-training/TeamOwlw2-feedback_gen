@@ -39,7 +39,7 @@ This system allows users to create, edit, save, update and download the feedback
 ## Useful Resources
 
  - [Database Schema](https://dbdiagram.io/d/638ce9b5bae3ed7c4544a0aa)
- - [Figma](https://www.figma.com/file/lpdyAUXqLwTomYpNPdA5Wr/team-Owlw2-feedback-form?node-id=724%3A2359&t=3cq9dL81e2y1BFvo-0)
+ - [Figma](https://www.figma.com/file/tcOouHZE8yJIX19gxkdKjl/TEAM-OWLW2?node-id=52%3A2470&t=LewKTMf2mHpljlAZ-0)
 
 ## Deployment
 
@@ -66,15 +66,15 @@ To deploy this project run
  
  - [@Eclarks](https://github.com/Eclarks)
  - [@onome123](https://github.com/onome123)
- - [@Ebubechi]()
+ - [@bubysteph](https://github.com/bubysteph)
  - [@bilkisutace](https://github.com/bilkisutace)
  - [@al-imraan](https://github.com/al-imraan)
  - [@Johnogundare](https://github.com/Johnogundare)
  - [@SinmiloluwaOgedengbe](https://github.com/SinmiloluwaOgedengbe)
  - [@Riella1](https://github.com/Riella1)
  - [@ridwanalaps](https://github.com/ridwanalaps)
- - []()
- - []()
+ - [@Diamondice02](https://github.com/Diamondice02)
+ - [@Funmilola2](https://github.com/Funmilola2)
  - []()
 
 </details>
