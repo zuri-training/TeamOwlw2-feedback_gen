@@ -11,22 +11,21 @@
   <body>
     <main class="container">
       <header>
-        <a href="./signin.html" rel="noopener noreferrer">
+        <a href="#" rel="noopener noreferrer">
           <img src="../Assets/Images/back-arrow.svg" alt="back-arrow">
         </a>
-        <p>Forgot password</p>
+        <p>New Password</p>
       </header>
-      <section>
-        <img src="../Assets/Images/forgot-password.svg" alt="asking a question">
-        <p>Enter the email address associated with your account</p>
-      </section>
-      <form action="" method="get">
+      <form action="" method="post">
         <div>
-          <label for="email">Email</label>
-          <input type="email" class="usericon" name="email" id="email">
+          <label for="newpass">Enter New Password</label>
+          <input type="text" class="usericon" name="new" id="newpass" required>
         </div>
-        <input type="button" value="Reset Password">
-        <p>Don't have an account? <a href="./signup.html" rel="noopener noreferrer">Sign up</a></p>
+        <div>
+          <label for="confirm">Confirm Password</label>
+          <input type="password" class="passicon" name="confirm" id="confirm" required>
+        </div>
+        <input type="button" value="Submit">
       </form>
     </main>
   </body>

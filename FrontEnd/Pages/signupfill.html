@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/CSS/signup.css">
+    <title>OwlForm</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="head">
+        <p class="title">Owl<span>Form</span></p>
+        <img src="../Assets/Images/cancel.svg" alt="go-back">
+      </header>
+      <form action="./signin.html" method="post">
+        <div class="entry">
+          <input type="text" class="user" name="user" id="username" placeholder="Username">
+          <input type="email" class="email" name="email" id="email" placeholder="Email Address">
+          <input type="password" class="pass" name="pass" id="password" placeholder="Password">
+          <input type="password" class="pass" name="confirmpass" id="confirmpass" placeholder="Confirm Pasword">
+        </div>
+        <div class="terms">
+          <input type="checkbox" name="check" id="check">
+          <label class="check" for="check">I agree to the terms & conditions</label>
+        </div>
+        <button class="owl">Sign up</button>
+      </form>
+      <p>Already have an account? <a href="./signin.html" rel="noopener noreferrer">Sign in</a></p>
+    </main>   
+  </body>
+</html>
