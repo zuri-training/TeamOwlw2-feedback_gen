@@ -9,7 +9,7 @@ const userSignUp = async (req, res) => {
 
   res
     .status(StatusCodes.CREATED)
-    .json({ success: true, data: { name: user.fullName }, jwt });
+    .json({ success: true, data: { email: user.email }, jwt });
 };
 
 const signIn = async (req, res) => {
@@ -32,7 +32,7 @@ const signIn = async (req, res) => {
     const jwt = createJWT(user);
     res
       .status(StatusCodes.OK)
-      .json({ success: true, data: { name: user.fullName }, jwt });
+      .json({ success: true, data: { email: user.email }, jwt });
   }
 }
 

@@ -6,6 +6,7 @@ const connectDB = require("./config/connect.db");
 
 // routers
 const userRouter = require("./routes/appUser.router");
+const formRouter = require("./routes/form.router");
 
 // error handler
 const errorHandlerMiddleware = require("./middlewares/error-handler");
@@ -15,6 +16,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/form", formRouter);
 
 app.use(errorHandlerMiddleware)
 
