@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* background-color: none; */
 }
 
 body {
@@ -13,6 +14,15 @@ body {
     
     color: #ffffff;
     padding: 15px;
+}
+
+.select p {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
 }
 
 div {
@@ -52,8 +62,18 @@ img {
     padding: 15px 20px;
 }
 
+h3 {
+    background-color: #0c1d2280;
+    color: #ffffff;
+    padding:10px 675px;
+    border-bottom: 1px solid #ffffff;
+}
+
+
 @media only screen and (max-width: 428px) {
+
     body {
+        width: 350px;
         background: #64B4A3;
         font-family: "Poppins", sans-serif;
         font-style: normal;
@@ -119,7 +139,7 @@ img {
     h3 {
         background-color: #0c1d2280;
         color: #ffffff;
-        padding: 8px 131px;
+        padding: 8px 90px;
         border-bottom: 1px solid #ffffff;
     }
 

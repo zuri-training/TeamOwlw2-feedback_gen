@@ -109,7 +109,7 @@
       color: #333333;
     }
   
-    button {
+    .a {
       width: 343px;
       background-color: #52ab98;
       border-radius: 6px;
@@ -119,6 +119,18 @@
       line-height: 14px;
       color: #ffffff;
       margin-top: 71px;
+    }
+
+    .b {
+      width: 343px;
+      background-color: #ffffff;
+      border-radius: 6px;
+      border: 2px solid #D9D9D9;
+      padding: 16px 24px;
+      font-size: 16px;
+      line-height: 14px;
+      color: #626262;
+      margin-top: 30px;
     }
   
   }
