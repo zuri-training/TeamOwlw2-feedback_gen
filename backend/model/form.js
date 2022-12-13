@@ -14,7 +14,7 @@ const FormSchema = new mongoose.Schema({
     organisationName: {
         type: String
     },
-    form_data: {
+    formData: {
         type: Map,
         required: true
     },
