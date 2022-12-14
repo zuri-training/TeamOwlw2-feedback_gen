@@ -9,28 +9,36 @@
     <title>OwlForm</title>
   </head>
   <body>
-    <header class="greet">
-      <div class="greeting">
-        <h1>Welcome Back</h1>
-      </div>
-    </header>
     <main class="container">
-      <article>
-        <p class="title">Owl<span>Form</span></p>
-        <p>Please login to continue using our app</p>
-      </article>
-      <form method="get" action="">
-        <div>
-          <label for="username">Username</label>
-          <input type="text" class="usericon "name="username" id="username">
+      <img src="../Assets/Images/back-arrow2.svg" class="back" alt="go-back">
+      <h1>Log in</h1>
+      <small></small>
+      <form method="post" action="" id="form">
+        <div class="signin">
+          <label for="email">Email</label>
+          <input type="email" class="" name="email" id="email">
+          <img src="../Assets/Images/tick.svg" class="okay user" alt="good">
+          <img src="../Assets/Images/danger.svg" class="bad user" alt="error">
         </div>
-        <div>
+        <div class="signin">
           <label for="password">Password</label>
-          <input type="password" class="passicon" name="password" id="password">
+          <input type="password" class="" name="password" id="password">
+          <img src="../Assets/Images/eye.svg" class="hide pass" id="hide" alt="hide">
+          <img src="../Assets/Images/HideCol.svg" class="show pass inactive" id="show" alt="show">
+          <a href="http://" rel="noopener noreferrer" class="forgot">Forgot Password?</a>
         </div>
-        <input type="button" value="Login">
-        <p>Don't have an account? <a href="./signup.html" rel="noopener noreferrer">Sign up</a></p>
+        <input type="submit" value="Login">
       </form>
+      <div class="break">
+        <hr><p>or continue with</p><hr>
+      </div>
+      <div class="logos">
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="../Assets/Images/google-logo.svg" alt="google-logo"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="../Assets/Images/apple-logo.svg" alt="apple-logo"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="../Assets/Images/facebook-logo.svg" alt="facebook-logo"></a>
+      </div>
+      <p>Don't have an account? <a href="./signup.html" rel="noopener noreferrer">Sign up</a></p>
+
     </main>
     <script src="../Assets/JS/signin.js"></script>
   </body>
