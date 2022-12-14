@@ -18,9 +18,15 @@ const validateFormBody = async (formData) => {
   for (const question in formData) {
     let qType = formData[question];
 
+    if (typeof formData[question] === "object") {
+        qType = formData[question][0]
+        console.log(qType)
+    }
+
     if (formData[question].startsWith("*")) {
         qType = formData[question].split(" ")[1];
     }
+
     switch (qType) {
       case QuestionType.ShortAnswer:
         break;
@@ -33,6 +39,7 @@ const validateFormBody = async (formData) => {
       case QuestionType.Dropdown:
         break;
       case QuestionType.FileUpload:
+        // Come back
         break;
       case QuestionType.LinearScale:
         break;
