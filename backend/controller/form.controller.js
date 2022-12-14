@@ -68,7 +68,17 @@ const updateForm = async (req, res) => {
   res.status(StatusCodes.OK).json({ success: true, data: form });
 };
 
-const deleteForm = async (req, res) => {};
+const deleteForm = async (req, res) => {
+  const { id: formID } = req.params;
+
+  const form = await Form.findOneAndDelete({ _id: formID, creatorID: req.user.userId });
+
+  if (!form) {
+    throw new NotFoundError("Resource not found");
+  }
+
+  res.status(StatusCodes.OK).json({ success: true, message: "Form has successfully been deleted" });
+};
 
 module.exports = {
   createForm,

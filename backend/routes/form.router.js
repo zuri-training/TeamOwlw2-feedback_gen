@@ -18,7 +18,7 @@ router.get("/review_form/:id", JWTAuth, reviewMyForm);
 router.
 route("/:id")
 .get(getById)
-.patch(updateForm) //Not tested yet till after form validation is complete
-.delete(deleteForm)
+.patch(JWTAuth, updateForm) //Not tested yet till after form validation is complete
+.delete(JWTAuth, deleteForm)
 
 module.exports = router;
