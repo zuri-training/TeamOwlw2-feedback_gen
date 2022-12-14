@@ -30,19 +30,51 @@ const getMyForms = async (req, res) => {
     "category organisationName noOfResponses"
   ).sort("updatedAt");
 
-  res.status(StatusCodes.OK).json({ success: true, data: { forms, nbHits: forms.length } })
+  res
+    .status(StatusCodes.OK)
+    .json({ success: true, data: { forms, nbHits: forms.length } });
 };
 
 const reviewMyForm = async (req, res) => {
-    const { id: formID } = req.params
+  const { id: formID } = req.params;
 
-    const form = await Form.findOne({ _id: formID, creatorID: req.user.userId })
+  const form = await Form.findOne({ _id: formID, creatorID: req.user.userId });
 
-    if (!form) {
-        throw new NotFoundError("Resource not found");
+  if (!form) {
+    throw new NotFoundError("Resource not found");
+  }
+
+  res.status(StatusCodes.OK).json({ success: true, data: form });
+};
+
+const updateForm = async (req, res) => {
+  const { id: formID } = req.params;
+  const { category, organisationName, formData } = req.body;
+  await validateFormBody(formData);
+
+  const form = await Form.findOneAndUpdate(
+    { _id: formID, creatorID: req.user.userId },
+    {
+      category: category,
+      organisationName: organisationName,
+      formData: formData,
     }
+  );
 
-    res.status(StatusCodes.OK).json({ success: true, data: form })
-}
+  if (!form) {
+    throw new NotFoundError("Resource not found");
+  }
 
-module.exports = { createForm, getById, getMyForms, reviewMyForm };
+  res.status(StatusCodes.OK).json({ success: true, data: form });
+};
+
+const deleteForm = async (req, res) => {};
+
+module.exports = {
+  createForm,
+  getById,
+  getMyForms,
+  reviewMyForm,
+  updateForm,
+  deleteForm,
+};
