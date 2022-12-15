@@ -1,6 +1,6 @@
 const email = document.querySelector("#email");
 const pass = document.querySelector("#password");
-const form = document.querySelector("#form");
+const form = document.querySelector("form");
 const passImg = document.querySelector (".pass");
 const show = document.querySelector("#show");
 const hide = document.querySelector("#hide");
@@ -67,9 +67,10 @@ function validatePass() {
 function checkInputs() {
   const emailValue = email.value.trim();
   const passValue = pass.value.trim();
-  if((emailValue === "") || (passValue === "")){
-    setErrorFor(email, "Please fill in the empty spaces"); 
-    setErrorFor(pass, "Please fill in the empty spaces"); 
+  if (emailValue === "") {
+    setErrorFor(email, "Please fill in the empty field"); 
+  } else if (passValue === "") {
+    setErrorFor(pass, "Please fill in the empty field"); 
   } else {
     setSuccessFor(email);
     setSuccessFor(pass);

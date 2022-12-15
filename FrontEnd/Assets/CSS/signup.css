@@ -1,6 +1,6 @@
 @import url(./signin.css);
 
-input[type=number] {
+input[type=tel] {
   width: 100%;
   border-radius: 0.6rem;
   border: 1px solid #52AB98;
@@ -8,7 +8,7 @@ input[type=number] {
   outline: none;
 }
 
-input[type=number]:focus {
+input[type=tel]:focus {
   border: none;
   border-bottom: 2px solid #52AB98;
   background-color: #52ab982d;
@@ -17,6 +17,18 @@ input[type=number]:focus {
 input[type=checkbox] {
   margin-top: 0.5rem;
   border: 1px solid #52AB98;
+}
+
+.error input {
+  border: 1px solid #eb5757;
+  background-color: #eb575749;
+  color: #eb5757;
+}
+
+.error input:focus {
+  background-color: #eb575749;
+  border: none;
+  border-bottom: 2px solid #eb5757;
 }
 
 .check {
@@ -47,14 +59,7 @@ input[type=checkbox] {
   justify-content: center;
 }
 
-/* .check {
-  display: inline;
-  letter-spacing: 0;
-  color: #000;
-  font-size: 1.4rem;
-  margin-left: 1rem;
-} */
-
-.disappear {
-  display: none;
+input[type=submit]:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
 }

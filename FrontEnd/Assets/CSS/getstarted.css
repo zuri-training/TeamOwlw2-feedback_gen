@@ -28,33 +28,70 @@ img {
 }
 
 h1 {
-  font-size: 52px;
-  line-height: 46px;
+  font-size: 3.1rem;
+  line-height: 4.6rem;
   font-weight: 600;
-  margin-top: 70px;
-  margin-bottom: 56px;
+  margin-top: 7rem;
+  margin-bottom: 5.6rem;
 }
 
 p {
-  width: 600px;
+  width: 90%;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   text-align: center;
   color: #333333;
+  margin: 0 0 3rem;
 }
 
-button {
-  width: 80%;
-  background-color: #52ab98;
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 75%;
   border-radius: 6px;
   border: none;
-  padding: 16px 24px;
+  padding: 1.6rem;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 14px;
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+}
+
+a:first-of-type {
+  border: 2px solid transparent;
+  background-color: #52ab98;
   color: #ffffff;
-  margin-top: 150px;
+}
+
+a:last-of-type {
+  border: 2px solid #d9d9d9;
+  background-color: #fff;
+  color: #52ab98;
+}
+
+a:first-of-type:hover,
+a:first-of-type:active {
+  border: 2px solid #d9d9d9;
+  background-color: #fff;
+  color: #52ab98;
+}
+
+a:last-of-type:hover,
+a:last-of-type:active {
+  border: 2px solid transparent;
+  background-color: #52ab98;
+  color: #fff;
 }
 
 /* @media only screen and (max-width: 428px) {

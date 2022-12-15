@@ -8,6 +8,8 @@ const show = document.querySelector("#show");
 const hide = document.querySelector("#hide");
 const small = document.querySelector("small");
 const input = document.querySelector("input");
+const check = document.querySelector("#check");
+const submit = document.querySelector("#submit")
 
 
 
@@ -40,6 +42,10 @@ pnumb.addEventListener("input", (e) => {
   validateNumber();   
 });
 
+check.addEventListener("change", (e) => {
+  checker();
+});
+
 function toggle() {
     if (pass.type === "password") {
       pass.type = "text";
@@ -54,15 +60,15 @@ function toggle() {
   
   function validateUser() {
     const userValue = user.value.trim();
-    const userCheck = /^[A-Za-z]+$/;
+    const userCheck = /^[A-Za-z][A-Za-z _]+$/;
     if (userValue === "") {
       setErrorFor(user, "Username cannot be blank"); 
-    } else if ((userValue.length <= 8) || (userValue.match(userCheck))) {
-      setErrorFor(user, "Username must be more than 8 characters");
+    } else if ((userValue.length <= 8) || (userValue.length >= 15)) {
+      setErrorFor(user, "Username must be between 8 and 15 characters");
     } else if ((userValue.length > 8) && (userValue.match(userCheck))) {
       setSuccessFor(user);
     } else {
-      setErrorFor(user, "Invalid Username");
+     setErrorFor(user, "Invalid Username, username must not include numbers or special characters except underscore(_)");
     }
   }
 
@@ -97,6 +103,8 @@ function toggle() {
       setSuccessFor(pnumb);
     } else if (pnumbValue === ""){
       setErrorFor(pnumb, "Phone number cannot be blank"); 
+    } else if ((pnumbValue.length < 11) || (pnumbValue.length > 11)) {
+      setErrorFor(pnumb, "Phone number must be 11 digits"); 
     } else{
       setErrorFor(pnumb, "The number you entered is invalid please follow the format given");
     }
@@ -106,31 +114,32 @@ function toggle() {
     const userValue = user.value.trim();
     const emailValue = email.value.trim();
     const passValue = pass.value.trim();
-    switch(input) {
-      case (userValue == ""):
-        setErrorFor(user, "Please fill in the empty spaces"); 
-        break;
-      case (emailValue === ""):
-        setErrorFor(email, "Please fill in the empty spaces"); 
-        break;
-      case (passValue == ""):
-        setErrorFor(pass, "Please fill in the empty spaces"); 
-        break;
-      default: 
-        setSuccessFor(input);
+        
+    if (userValue === "") {
+      setErrorFor(user, "Please fill in the empty field"); 
+    } else if (emailValue === "") {
+      setErrorFor(email, "Please fill in the empty field"); 
+    } else if (passValue === "") {
+      setErrorFor(pass, "Please fill in the empty field"); 
+    } else if (pnumbValue === "") {
+      setErrorFor(pnumb, "Please fill in the empty field"); 
+    } else {
+      setSuccessFor(email);
+      setSuccessFor(pass);
+      setSuccessFor(user);
+      setSuccessFor(pnumb)
     }
-    
-    // if((emailValue === "") || (passValue === "") || (userValue === "")) {
-    //   setErrorFor(email, "Please fill in the empty spaces"); 
-    //   setErrorFor(pass, "Please fill in the empty spaces"); 
-    //   setErrorFor(user, "Please fill in the empty spaces"); 
-    // } else {
-    //   setSuccessFor(email);
-    //   setSuccessFor(pass);
-    //   setSuccessFor(user);
-    // }
   }
-  
+ 
+  function checker () {
+    if (check.checked) {
+      submit.disabled = false;
+    } else{
+      submit.disabled = true;
+      // setErrorFor(check, "Please check the terms and conditions");
+    }
+  }
+
   function setErrorFor(input, message) {
     const signin = input.parentElement;
     small.innerText = message;

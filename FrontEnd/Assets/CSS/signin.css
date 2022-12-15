@@ -26,7 +26,7 @@ body {
   position: relative;
 }
 
-.back {
+.link {
   margin-top: 6.2rem;
   align-self: flex-start; 
 }
@@ -96,10 +96,16 @@ input[type="submit"] {
   background-color: #52AB98;
   padding: 1.6rem;
   color: #fff;
-  border: inherit;
+  border: none;
   cursor: pointer;
   font-weight: 600;
   font-size: 1.6rem;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #52ab9886;
+  color: #52ab98;
 }
 
 a {
@@ -135,7 +141,7 @@ a {
   vertical-align: middle;
 }
 
-a,
+.signin a,
 p:last-of-type {
   font-size: 1.3rem;
   letter-spacing: 0.05rem;
@@ -148,12 +154,14 @@ p:last-of-type {
 
 .success input {
   border: none;
+  color: #52AB98;
   border-bottom: 2px solid #52ab98;
 }
 
 .error input {
   border: 1px solid #eb5757;
   background-color: #eb575749;
+  color: #eb5757;
 }
 
 .error input:focus {
