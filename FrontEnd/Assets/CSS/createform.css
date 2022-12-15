@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    margin: 179px auto auto;
+    margin: 82px auto auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +60,7 @@ main p {
     background: #E0E0E0;
     border-radius: 10px;
     margin-bottom: 50px;
-   
+    text-decoration: none;
 }
 
 .image {
