@@ -5,46 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Assets/CSS/signup.css">
+    <link rel="stylesheet" href="../Assets/CSS/signin.css">
     <title>OwlForm</title>
   </head>
   <body>
     <main class="container">
-      <img src="../Assets/Images/back-arrow2.svg" class="back" alt="go-back">
-      <h1>Sign up</h1>
+      <a href="./signup.html" rel="noopener noreferrer" class="link"><img src="../Assets/Images/back-arrow2.svg" class="back" alt="go-back"></a>
+      <h1>Log in</h1>
       <small></small>
-      <form action="./signup.html" method="get" id="form">
-        <div class="signup name">
-          <label for="name">Name</label>
-          <input type="text" class="" name="name" id="name">
-          <img src="../Assets/Images/tick.svg" class="okay user" alt="good">
-          <img src="../Assets/Images/danger.svg" class="bad user" alt="error">
-        </div>
-        <div class="signup email">
+      <form method="post" action="" id="form">
+        <div class="signin">
           <label for="email">Email</label>
           <input type="email" class="" name="email" id="email">
           <img src="../Assets/Images/tick.svg" class="okay user" alt="good">
           <img src="../Assets/Images/danger.svg" class="bad user" alt="error">
         </div>
-        <div class="signup password">
+        <div class="signin">
           <label for="password">Password</label>
           <input type="password" class="" name="password" id="password">
           <img src="../Assets/Images/eye.svg" class="hide pass" id="hide" alt="hide">
           <img src="../Assets/Images/HideCol.svg" class="show pass inactive" id="show" alt="show">
+          <a href="./forgotpassword.html" rel="noopener noreferrer" class="forgot">Forgot Password?</a>
         </div>
-        <div class="signup phone">
-          <label for="number">Phone Number</label>
-          <input type="tel" class="" placeholder="0334 xxxx xxxx" name="number" id="number">
-          <img src="../Assets/Images/tick.svg" class="okay user" alt="good">
-          <img src="../Assets/Images/danger.svg" class="bad user" alt="error">
-        </div>
-        <div class="signup check">
-          <input type="checkbox" name="check" id="check">
-          <label for="check" class="checklab">
-            I agree with the terms and conditions and also the protection of my personal data on this application 
-          </label>
-        </div>
-        <input type="submit" value="Sign Up" id="submit" disabled="true">
+        <input type="submit" value="Login">
       </form>
       <div class="break">
         <hr><p>or continue with</p><hr>
@@ -54,8 +37,9 @@
         <a href="#" target="_blank" rel="noopener noreferrer"><img src="../Assets/Images/apple-logo.svg" alt="apple-logo"></a>
         <a href="#" target="_blank" rel="noopener noreferrer"><img src="../Assets/Images/facebook-logo.svg" alt="facebook-logo"></a>
       </div>
-      <p>Existing User? <a href="./signin.html" rel="noopener noreferrer">Log in</a></p>
-    </main>   
+      <p>Don't have an account? <a href="./signup.html" rel="noopener noreferrer">Sign up</a></p>
+
+    </main>
+    <script src="../Assets/JS/signin.js"></script>
   </body>
-  <script src="../Assets/JS/signup.js"></script>
 </html>

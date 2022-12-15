@@ -1,0 +1,65 @@
+@import url(./signin.css);
+
+input[type=tel] {
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 1px solid #52AB98;
+  padding: 1.2rem 1.6rem;
+  outline: none;
+}
+
+input[type=tel]:focus {
+  border: none;
+  border-bottom: 2px solid #52AB98;
+  background-color: #52ab982d;
+}
+
+input[type=checkbox] {
+  margin-top: 0.5rem;
+  border: 1px solid #52AB98;
+}
+
+.error input {
+  border: 1px solid #eb5757;
+  background-color: #eb575749;
+  color: #eb5757;
+}
+
+.error input:focus {
+  background-color: #eb575749;
+  border: none;
+  border-bottom: 2px solid #eb5757;
+}
+
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+  color: #52AB98;
+}
+
+.checklab {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.02rem;
+  width: 75%
+}
+
+.signup img {
+  position: absolute;
+  right: 1rem;
+  width: 2rem;
+  font-size: 2rem;
+  color: #52AB98;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type=submit]:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}

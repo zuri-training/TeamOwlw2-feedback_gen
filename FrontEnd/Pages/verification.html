@@ -11,27 +11,26 @@
   <body>
     <main class="container">
       <header>
-        <a href="./signin.html" rel="noopener noreferrer">
+        <a href="./forgotpassword.html" rel="noopener noreferrer">
           <img src="../Assets/Images/back-arrow.svg" alt="back-arrow">
         </a>
-        <p>Forgot password</p>
+        <p>Verification</p>
       </header>
       <section>
-        <img src="../Assets/Images/forgot-password.svg" alt="asking a question">
-        <p>Enter the email address associated with your account</p>
+        <img class="verify" src="../Assets/Images/verification.svg" alt="asking a question">
+        <p>Enter the verification code we just sent to your email</p>
       </section>
-      <small></small>
+      
       <form action="" method="post">
-        <div class="forgot">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email">
-          <img src="../Assets/Images/tick.svg" class="okay user" alt="good">
-          <img src="../Assets/Images/danger.svg" class="bad user" alt="error">
+        <div class="code">
+          <input type="number" name="num1" id="number">
+          <input type="number" name="num1" id="number">
+          <input type="number" name="num1" id="number">
+          <input type="number" name="num1" id="number">
         </div>
-        <input type="submit" value="Reset Password">
-        <p>Don't have an account? <a href="./signup.html" rel="noopener noreferrer">Sign up</a></p>
+        <input type="submit" value="Verify">
+        <p>If you didn't receive the code? <a href="#" rel="noopener noreferrer">Resend</a></p>
       </form>
     </main>
-    <script src="../Assets/JS/forgotpassword.js"></script>
   </body>
 </html>
