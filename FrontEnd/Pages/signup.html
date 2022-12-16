@@ -10,20 +10,52 @@
   </head>
   <body>
     <main class="container">
-      <header>
-          <p class="title">Owl<span>Form</span></p>
-          <a href="./getStarted.html" rel="noopener noreferrer"><img src="../Assets/Images/cancel.svg" alt="go-back"></a>
-      </header>
-      <a href="./signupfill.html" rel="noopener noreferrer"><button class="owl">Sign up with OwlForm</button></a>
+      <img src="../Assets/Images/back-arrow2.svg" class="back" alt="go-back">
+      <h1>Sign up</h1>
+      <small></small>
+      <form action="./signup.html" method="get" id="form">
+        <div class="signup name">
+          <label for="name">Name</label>
+          <input type="text" class="" name="name" id="name">
+          <img src="../Assets/Images/tick.svg" class="okay user" alt="good">
+          <img src="../Assets/Images/danger.svg" class="bad user" alt="error">
+        </div>
+        <div class="signup email">
+          <label for="email">Email</label>
+          <input type="email" class="" name="email" id="email">
+          <img src="../Assets/Images/tick.svg" class="okay user" alt="good">
+          <img src="../Assets/Images/danger.svg" class="bad user" alt="error">
+        </div>
+        <div class="signup password">
+          <label for="password">Password</label>
+          <input type="password" class="" name="password" id="password">
+          <img src="../Assets/Images/eye.svg" class="hide pass" id="hide" alt="hide">
+          <img src="../Assets/Images/HideCol.svg" class="show pass inactive" id="show" alt="show">
+        </div>
+        <div class="signup phone">
+          <label for="number">Phone Number</label>
+          <input type="tel" class="" placeholder="0334 xxxx xxxx" name="number" id="number">
+          <img src="../Assets/Images/tick.svg" class="okay user" alt="good">
+          <img src="../Assets/Images/danger.svg" class="bad user" alt="error">
+        </div>
+        <div class="signup check">
+          <input type="checkbox" name="check" id="check">
+          <label for="check" class="checklab">
+            I agree with the terms and conditions and also the protection of my personal data on this application 
+          </label>
+        </div>
+        <input type="submit" value="Sign Up" id="submit" disabled="true">
+      </form>
       <div class="break">
-        <hr><p>or</p><hr>
+        <hr><p>or continue with</p><hr>
       </div>
-      <div class="options">
-        <button class="facebook option"><img src="../Assets/Images/facebook-logo.svg" alt="facebook-logo">Sign up with Facebook</button>
-        <button class="apple option"><img src="../Assets/Images/apple-logo.svg" alt="apple-logo">Sign up with Apple</button>
-        <button class="google option"><img src="../Assets/Images/google-logo.svg" alt="google-logo">Sign up with Google</button>
+      <div class="logos">
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="../Assets/Images/google-logo.svg" alt="google-logo"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="../Assets/Images/apple-logo.svg" alt="apple-logo"></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src="../Assets/Images/facebook-logo.svg" alt="facebook-logo"></a>
       </div>
-      <p>Already have an account? <a href="./signin.html" rel="noopener noreferrer">Sign in</a></p>
-    </main>
+      <p>Existing User? <a href="./signin.html" rel="noopener noreferrer">Log in</a></p>
+    </main>   
   </body>
+  <script src="../Assets/JS/signup.js"></script>
 </html>
