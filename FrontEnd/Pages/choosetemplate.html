@@ -9,9 +9,10 @@
 </head>
 <body>
     <div class="top">
-        <img src="../Assets/Images/back-arrow.svg" alt="" id="back">
+        <a href="#" target="_blank"><img src="../Assets/Images/back-arrow.svg" alt="back" id="back"></a>
+        
     </div>
-    <img src="../Assets/Images/cancel2.svg" alt="" id="cancel">
+    <a href="#" target="_blank"><img src="../Assets/Images/cancel2.svg" alt="cancel" id="cancel"></a>
 
     <main>
         <div class="heading">
@@ -20,59 +21,75 @@
         </div>
 
         <div id="categories">
-            <p>Form Template Categories</p>
-            <img src="../Assets/Images/forwardarrow.svg" alt="">
+            <!-- <p>Form Template Categories</p>
+            <img src="../Assets/Images/forwardarrow.svg" alt=""> -->
+            <label for="formname">Form Template Categories</label>
+            <input class='fname-input' id='form-name' name='fname' required type='text' placeholder='Form Template Categories'>
+
+            <select id="dropdown" class='select' id='select'>
+                <option selected value=''>Form Template Categories</option>
+                <option value='challenges'>Challenges</option>
+                <option value='projects'>Projects</option>
+                <option value='community'>Community</option>
+              </select>
+
+
         </div>
 
-        <!-- <select name="templates" id="templates">
+        <label for="fname">Form Template Categories</label>
+        <input type="text" id="template categories" name="form-template">
+
+        <select name="templates" id="templates">
             <label for="templates">Form Template Categories</label>
             <option value=""></option>
             <option value=""></option>
             <option value=""></option>
             <option value=""></option>
-        </select>   -->
+        </select>  
 
-        <div id="search">
-            <p>Search all templates</p>
-            <img src="../Assets/Images/search2.svg" alt="">
+        <div class="search">
+            <input id='search' name='searchtemplate' type='Search' placeholder='Search all templates'>
+            <img class='searchimg' src="../Assets/Images/search2.svg" alt="">
+            
         </div>
             
         <div class="actual-templates">
             <img src="../Assets/Images/1sttemp.svg" alt="student template">
             <p>Student Registration Form</p>
-            <button class="a">Use Template</button>
-            <button class="b">Preview Template</button>
+            <a href="#" class="a" target="_blank">Use Template</a>
+            <a href="#" class="b" target="_blank">Preview Template</a>
+            
         </div>
 
         <div class="actual-templates">
             <img src="../Assets/Images/2ndtemp.svg" alt="customer template">
             <p>New Customer Registration Form</p>
-            <button class="a">Use Template</button>
-            <button class="b">Preview Template</button>
+            <a href="#" class="a" target="_blank">Use Template</a>
+            <a href="#" class="b" target="_blank">Preview Template</a>
         </div>
         <div class="actual-templates">
             <img src="../Assets/Images/feedback.svg" alt="feedback template">
             <p>Feedback Form</p>
-            <button class="a">Use Template</button>
-            <button class="b">Preview Template</button>
+            <a href="#" class="a" target="_blank">Use Template</a>
+            <a href="#" class="b" target="_blank">Preview Template</a>
         </div>
         <div class="actual-templates">
             <img src="../Assets/Images/informationrequest.svg" alt="information request template">
             <p>Information Request Form</p>
-            <button class="a">Use Template</button>
-            <button class="b">Preview Template</button>
+            <a href="#" class="a" target="_blank">Use Template</a>
+            <a href="#" class="b" target="_blank">Preview Template</a>
         </div>
         <div class="actual-templates">
             <img src="../Assets/Images/hotel.svg" alt="hotel template">
             <p>Hotel Booking Form</p>
-            <button class="a">Use Template</button>
-            <button class="b">Preview Template</button>
+            <a href="#" class="a" target="_blank">Use Template</a>
+            <a href="#" class="b" target="_blank">Preview Template</a>
         </div>
         <div class="actual-templates">
             <img src="../Assets/Images/restaurantorder.svg" alt="restaurant order template">
             <p>Restaurant Order Form</p>
-            <button class="a">Use Template</button>
-            <button class="b">Preview Template</button>
+            <a href="#" class="a" target="_blank">Use Template</a>
+            <a href="#" class="b" target="_blank">Preview Template</a>
         </div>
     </main>
 </body>
