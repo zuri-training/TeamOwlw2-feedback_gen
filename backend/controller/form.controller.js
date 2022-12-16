@@ -7,6 +7,7 @@ const createForm = async (req, res) => {
   req.body.creatorID = req.user.userId;
   await validateFormBody(req.body.formData);
   const form = await Form.create(req.body);
+  // const form = req.body;
 
   res.status(StatusCodes.CREATED).json({ success: true, data: form });
 };
