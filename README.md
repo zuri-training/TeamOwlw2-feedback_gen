@@ -49,6 +49,10 @@ To deploy this project run
   npm run deploy
 ```
 
+## Links
+
+[Hosted link](https://melodic-bublanina-46c6cf.netlify.app/)
+
 ## Meet Team Owlw2
 
 <details><summary>Developers</summary>
