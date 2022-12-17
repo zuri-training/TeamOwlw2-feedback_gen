@@ -9,6 +9,7 @@ html {
 
 body {
   margin: 0;
+  overflow: auto;
 }
 
 .container {
@@ -22,115 +23,186 @@ body {
   max-width: 42rem;
   min-width: 30rem;
   margin: auto;
+  position: relative;
 }
 
-.greet {
-  width: 100%;
-  text-align: center;
+.link {
+  margin-top: 6.2rem;
+  align-self: flex-start; 
 }
 
-.greeting {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 12rem;
-  background-color: #52ab98 ;
-  border-radius: 0 0 50% 50%;
-}
-
-.greet h1 {
-  color: #fff;
-  font-size: 3.1rem;
-  font-weight: 700;
-}
-
-article .title {
+h1 {
+  display: inline;
   font-size: 3.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.title span {
+  font-weight: 600;
+  align-self: start;
+  margin: 4.3rem 0 0;
   color: #52AB98;
 }
 
-p:nth-of-type(2) {
-  font-size: 1.3rem;
-  margin-top: 0;
-  letter-spacing: 0.05rem;
-  color: #040404;
+small {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  text-align: left;
+  margin-top: 2rem;
 }
 
 form {
-  margin-top: 8.6rem;
+  margin-top: 2.3rem;
   width: 100%;
 }
 
 div {
   text-align: left;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 label {
-  display: block;
+  display: inline-block;
+  margin-bottom: 0.5rem;
   font-size: 1.7rem;
-  color: #52AB98;
   letter-spacing: 0.15rem;
 }
 
+input[type=email],
 input[type=text],
 input[type=password] {
   width: 100%;
   border-radius: 0.6rem;
   border: 1px solid #52AB98;
-  padding: 1rem;
+  padding: 1.2rem 1.6rem;
   outline: none;
 }
 
 input[type=text]:focus,
+input[type=email]:focus,
 input[type=password]:focus {
   border: none;
   border-bottom: 2px solid #52AB98;
+  background-color: #e8f0fe;
 }
 
-div a {
+.signin a {
   display: block;
-  text-align: right;
+  text-align: left;
 }
 
-input[type="button"] {
+input[type="submit"] {
   display: block;
   margin: 0 auto;
-  width: 80%;
-  border-radius: 8rem;
+  width: 100%;
+  border-radius: 1rem;
   background-color: #52AB98;
-  text-transform: uppercase;
-  padding: 1.5rem;
+  padding: 1.6rem;
   color: #fff;
-  border: inherit;
+  border: none;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 1.4rem;
+  font-weight: 600;
+  font-size: 1.6rem;
 }
+
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #52ab9886;
+  color: #52ab98;
+}
+
 a {
   text-decoration: none;
   color: #52AB98;
 } 
 
-a,
+.break,
+.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.break {
+  gap: 1.9rem;
+  margin: 1rem 0 0;
+  height: 1.5rem;
+}
+
+.break hr {
+  width: 10rem;
+  border: none;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+}
+
+.logos {
+  gap: 1rem;
+  margin: 0;
+}
+
+.logos img {
+  vertical-align: middle;
+}
+
+.signin a,
 p:last-of-type {
   font-size: 1.3rem;
   letter-spacing: 0.05rem;
   line-height: 3.2rem;
 }
 
-.usericon {
-  background: url(../Images/tick.svg) no-repeat 95%;
-  background-size: 2rem;
+.signin:nth-of-type(2) {
+  margin-bottom: 4rem;
 }
 
-.passicon {
-  background: url(../Images/eye.svg) no-repeat 95%;
-  background-size: 2rem;
+.success input {
+  border: none;
+  color: #52AB98;
+  border-bottom: 2px solid #52ab98;
+}
+
+.error input {
+  border: 1px solid #eb5757;
+  background-color: #eb575749;
+  color: #eb5757;
+}
+
+.error input:focus {
+  background-color: #eb575749;
+  border: none;
+  border-bottom: 2px solid #eb5757;
+}
+
+.signin img {
+  position: absolute;
+  right: 1rem;
+  width: 2rem;
+  font-size: 2rem;
+  color: #52AB98;
+}
+
+.user {
+  top: 4.5rem;
+  visibility: hidden;
+}
+
+.show {
+  top: 4.6rem;
+}
+
+.hide {
+  top: 4.7rem;
+}
+
+.success .okay {
+  visibility: visible;
+}
+
+.error .bad {
+  visibility: visible;
+}
+
+.inactive {
+  visibility: hidden;
+}
+
+.pass {
+  cursor: pointer;
 }
