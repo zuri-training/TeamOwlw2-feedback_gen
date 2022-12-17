@@ -4,11 +4,7 @@ const slides = document.querySelectorAll("article")
 
 
 next.addEventListener("click" ,(e) => {
-  if (n > slides.length) {
-    next.setAttribute("href" , "./getStarted.html")
-  } else {
-    plusSlides(1);
-  }
+  plusSlides(1);
 });
 
 let slideIndex = 1;
@@ -24,6 +20,10 @@ function currentSlide(n) {
 
 function showSlides(n) {
     let i;
+    const slides = document.querySelectorAll("article")
+    if (n > slides.length) {
+      next.setAttribute("href" , "./getStarted.html")
+    }
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
