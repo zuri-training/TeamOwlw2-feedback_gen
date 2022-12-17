@@ -8,7 +8,7 @@ This system allows users to create, edit, save, update and download the feedback
 
 ## Documentation Link
 
-[Documentation](https://docs.google.com/document/d/1jO6IiHKTrZ5ClHMPfj15Tcy2CrTWs9_gJIm_9DGlYRk/edit?usp=sharing)
+ - [Documentation](https://docs.google.com/document/d/1jO6IiHKTrZ5ClHMPfj15Tcy2CrTWs9_gJIm_9DGlYRk/edit?usp=sharing)
 
 ## Features
 
@@ -51,7 +51,7 @@ To deploy this project run
 
 ## Links
 
-[Hosted link](https://melodic-bublanina-46c6cf.netlify.app/)
+ - [Hosted link](https://melodic-bublanina-46c6cf.netlify.app/)
 
 ## Meet Team Owlw2
 
