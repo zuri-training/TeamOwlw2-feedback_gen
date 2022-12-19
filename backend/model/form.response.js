@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const FormResponseSchema = new mongoose.Schema({
     formID: {
         type: mongoose.Types.ObjectId,
-        ref: "AppUser",
+        ref: "Form",
         required: true
     },
     responseData: {

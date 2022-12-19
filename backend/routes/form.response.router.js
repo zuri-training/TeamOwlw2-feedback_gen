@@ -1,4 +1,8 @@
 const express = require("express")
+const { addAResponse } = require("../controller/form.response.controller")
 
-const route = express.Router()
+const router = express.Router()
 
+router.post("/", addAResponse);
+
+module.exports = router;

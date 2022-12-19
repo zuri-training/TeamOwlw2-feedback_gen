@@ -15,7 +15,7 @@ const FormSchema = new mongoose.Schema({
         type: String
     },
     formData: {
-        type: Map,
+        type: {},
         required: true
     },
     noOfResponses: {
