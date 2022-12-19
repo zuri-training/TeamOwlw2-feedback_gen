@@ -193,15 +193,6 @@ div p {
         line-height: 32px;
         text-align: start;
         letter-spacing: 0.005em;
-        color: #040404;
-    
+        color: #040404;   
     }
-
-    .line {
-        margin-top: 90px;
-        width: 147px;
-        height: 5px;
-        background: #000000;
-    }
-
 }
