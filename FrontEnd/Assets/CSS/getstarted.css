@@ -45,17 +45,35 @@ p {
   margin: 0 0 3rem;
 }
 
+p:first-of-type {
+  margin-bottom: 5.6rem;
+}
+
+.benefit {
+  margin-bottom: 0.5rem;
+}
+
+.benefit,
+a,
+span {
+  font-size: 1.4rem;
+}
+
 .links {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 
 a {
+  text-decoration: none;
+  color: #52ab98;
+}
+
+.explore {
   display: block;
   text-align: center;
   text-decoration: none;
@@ -66,32 +84,17 @@ a {
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.4rem;
-}
-
-a:first-of-type {
-  border: 2px solid transparent;
-  background-color: #52ab98;
-  color: #ffffff;
-}
-
-a:last-of-type {
-  border: 2px solid #d9d9d9;
-  background-color: #fff;
-  color: #52ab98;
-}
-
-a:first-of-type:hover,
-a:first-of-type:active {
-  border: 2px solid #d9d9d9;
-  background-color: #fff;
-  color: #52ab98;
-}
-
-a:last-of-type:hover,
-a:last-of-type:active {
   border: 2px solid transparent;
   background-color: #52ab98;
   color: #fff;
+  margin-bottom: 5rem;
+}
+
+.explore:hover,
+.explore:active {
+  border: 2px solid transparent;
+  background-color: #52ab9881;
+  color: #52ab98;
 }
 
 /* @media only screen and (max-width: 428px) {
