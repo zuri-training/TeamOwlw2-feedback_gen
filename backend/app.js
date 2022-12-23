@@ -30,7 +30,7 @@ app.use("/api/v1/form-response", responseRouter)
 
 app.use(errorHandlerMiddleware)
 
-const port = process.env.PORT || 5500;
+const port = process.env.PORT || 5550;
 
 const start = async () => {
   try {

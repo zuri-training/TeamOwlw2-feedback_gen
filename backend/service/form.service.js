@@ -1,131 +1,72 @@
 const { BadRequestError } = require("../errors");
 
+const QuestionTypes = {
+  ShortAnswer: "shortAnswer",
+  Paragraph: "paragraph",
+  MultipleChoice: "multipleChoice",
+  CheckBox: "checkBoxes",
+  Dropdown: "dropdown",
+  FileUpload: "fileUpload",
+  LinearScale: "linearScale",
+  MultipleChoiceGrid: "multipleChoiceGrid",
+  CheckBoxGrid: "checkBoxGrid",
+  Date: "date",
+  Time: "time",
+};
+
 const validateFormBody = async (formData) => {
-  const QuestionType = {
-    ShortAnswer: "shortAnswer",
-    Paragraph: "paragraph",
-    MultipleChoice: "multipleChoice",
-    CheckBox: "checkBoxes",
-    Dropdown: "dropdown",
-    FileUpload: "fileUpload",
-    LinearScale: "linearScale",
-    MultipleChoiceGrid: "multipleChoiceGrid",
-    CheckBoxGrid: "checkBoxGrid",
-    Date: "date",
-    Time: "time",
-  };
 
   for (const question in formData) {
-    let qType = formData[question];
+    let [ questionType ] = getExactQuestionType(formData[question]);
 
-    if (typeof qType === "object") {
-      qType = formData[question][0];
-    }
-
-    if (qType.startsWith("*")) {
-      qType = qType.split(" ")[1];
-    }
-
-    switch (qType) {
-      case QuestionType.ShortAnswer:
+    switch (questionType) {
+      case QuestionTypes.ShortAnswer:
         break;
-      case QuestionType.Paragraph:
+      case QuestionTypes.Paragraph:
         break;
-      case QuestionType.MultipleChoice:
+      case QuestionTypes.MultipleChoice:
         const checkMPDataType = formData[question];
         if (checkMPDataType !== "object" && !(checkMPDataType.length > 0)) {
           throw new BadRequestError("Error from Multiple choice question type");
         }
         break;
-      case QuestionType.CheckBox:
+      case QuestionTypes.CheckBox:
         break;
 
       // Validation for drop down question type
-      case QuestionType.Dropdown:
+      case QuestionTypes.Dropdown:
         const checkDataType = formData[question];
         if (checkDataType !== "object" && !(checkDataType.length > 0)) {
           throw new BadRequestError("Error from Drop Down question type");
         }
         break;
-      case QuestionType.FileUpload:
+      case QuestionTypes.FileUpload:
         // Come back
         break;
 
       // Validation for linear scale question type
-      case QuestionType.LinearScale:
+      case QuestionTypes.LinearScale:
         const scaleConstraints = formData[question][1];
+        linearScaleValidation(scaleConstraints);
 
-        let holdStartValue;
-        for (const constraint in scaleConstraints) {
-
-          switch (constraint) {
-            case "start":
-              const startValue = scaleConstraints[constraint];
-
-              checkIntegerType(startValue);
-
-              // Ensure scale starts from either 0 or 1
-              if (startValue !== 0 && startValue !== 1) {
-                console.log(startValue)
-                throw new BadRequestError(
-                  "Error from linear scale question. scale should start from either 0 or 1"
-                );
-              }
-              holdStartValue = startValue;
-              break;
-            case "end":
-              const endValue = scaleConstraints[constraint];
-              checkIntegerType(endValue);
-
-              // Ensure end scale is between start scale and 10
-              if (endValue > holdStartValue && endValue <= 10) { 
-
-              } else {
-                throw new BadRequestError(
-                  "Error from linear scale question. scale should have an end value between start value and 10"
-                );
-              }
-              break;
-            case "startLabel":
-              break;
-            case "endLabel":
-              break;
-            default:
-              throw new BadRequestError("Invalid linear scale constraint");
-              break;
-          }
-        }
         break;
 
       // Multiple choice grid question type validation
-      case QuestionType.MultipleChoiceGrid:
+      case QuestionTypes.MultipleChoiceGrid:
         const MCgridOptions = formData[question][1];
+        gridQuestionTypeValidation(MCgridOptions);
 
-        for (const option in MCgridOptions) {
-          if (option !== "rows" && option !== "columns") {
-            throw new BadRequestError(
-              "Incorrect options in Multiple Choice Grid question type"
-            );
-          }
-        }
         break;
 
       // Check box grid question type validation
-      case QuestionType.CheckBoxGrid:
+      case QuestionTypes.CheckBoxGrid:
         const gridOptions = formData[question][1];
-
-        for (const option in gridOptions) {
-          if (option !== "rows" && option !== "columns") {
-            throw new BadRequestError(
-              "Incorrect options in Multiple Choice Grid question type"
-            );
-          }
-        }
+        gridQuestionTypeValidation(gridOptions);
 
         break;
-      case QuestionType.Date:
+      case QuestionTypes.Date:
         break;
-      case QuestionType.Time:
+      case QuestionTypes.Time:
         break;
       default:
         throw new BadRequestError("Invalid question type");
@@ -133,6 +74,71 @@ const validateFormBody = async (formData) => {
     }
   }
 
+  return;
+};
+
+const getExactQuestionType = (constraint) => {
+  let questionType = constraint;
+  let required = false
+
+  if (typeof questionType === "object") {
+    questionType = constraint[0];
+  }
+
+  if (questionType.startsWith("*")) {
+    required = true
+    questionType = questionType.split(" ")[1];
+  }
+
+  return [questionType, required];
+};
+
+const linearScaleValidation = (scaleConstraints) => {
+  let holdStartValue;
+  for (const constraint in scaleConstraints) {
+    switch (constraint) {
+      case "start":
+        const startValue = scaleConstraints[constraint];
+
+        checkIntegerType(startValue);
+
+        // Ensure scale starts from either 0 or 1
+        if (startValue !== 0 && startValue !== 1) {
+          throw new BadRequestError(
+            "Error from linear scale question. scale should start from either 0 or 1"
+          );
+        }
+        holdStartValue = startValue;
+        break;
+      case "end":
+        const endValue = scaleConstraints[constraint];
+        checkIntegerType(endValue);
+
+        // Ensure end scale is between start scale and 10
+        if (endValue > holdStartValue && endValue <= 10) {
+        } else {
+          throw new BadRequestError(
+            "Error from linear scale question. scale should have an end value between start value and 10"
+          );
+        }
+        break;
+      case "startLabel":
+        break;
+      case "endLabel":
+        break;
+      default:
+        throw new BadRequestError("Invalid linear scale constraint");
+        break;
+    }
+  }
+};
+
+const gridQuestionTypeValidation = (gridOptions) => {
+  for (const option in gridOptions) {
+    if (option !== "rows" && option !== "columns") {
+      throw new BadRequestError("Bad resquest. Check grid question type");
+    }
+  }
   return;
 };
 
@@ -144,4 +150,4 @@ const checkIntegerType = (variable) => {
   }
 };
 
-module.exports = { validateFormBody };
+module.exports = { validateFormBody, getExactQuestionType, QuestionTypes };
