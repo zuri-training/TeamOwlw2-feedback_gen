@@ -23,10 +23,8 @@ body {
   max-width: 42.5rem;
   min-width: 30rem;
   margin: 0 auto;
-  border: 1px solid #d9d9d9;
+  background-color: #d9d9d966;
   position: relative;
-  height: 100%;
-  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -36,16 +34,18 @@ nav {
   color: #fff;
   width: 100%;
   background-color: #2b6777;
-  /* position: sticky; */
-  /* top: 0; */
 }
 
 nav img[alt=search-icon] {
   margin-left: 3rem;
 }
 
-.profile {
+label {
   cursor: pointer;
+}
+
+input {
+  display: none;
 }
 
 nav img[alt=profile-pic] {
@@ -73,15 +73,13 @@ img[alt=add-icon] {
 }
 
 .frame {
+  transform: translateX(100%);
   width: 100%;
-  /* align-self: flex-start; */
-  /* background-color: transparent; */
-  /* position: absolute; */
-  width: calc(42rem);
-  top: 7rem;
-  left: 0;
-  overflow: auto;
-  /* display: none; */
+  transition: all 0.6s ease;
+}
+
+input:checked ~ .frame {
+  transform: translateX(0%);
 }
 
 .frame a {
@@ -90,7 +88,6 @@ img[alt=add-icon] {
 
 .inside {
   width: 70%;
-  
   background-color: #193d46;
 }
 
@@ -156,3 +153,22 @@ a {
   font-size: 1.6rem;
 }
 
+.reg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c7ebe1;
+  width: 100%;
+}
+
+.reg a{
+  color: #000;
+}
+ 
+.reg p {
+  font-size: 1.4rem;
+}
+
+.reg p>span {
+  color: #aca8a8;
+}
